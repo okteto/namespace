@@ -1,4 +1,4 @@
-name: 'Namespace'
+name: 'Okteto Namespace'
 description: 'Activate a namespace and get the credentials for a Okteto Cloud namespace'
 inputs: 
   namespace:
@@ -13,3 +13,6 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.namespace }}
+branding:
+  icon: 'arrow-up-circle'  
+  color: 'green'
