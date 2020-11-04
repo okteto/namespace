@@ -46,6 +46,6 @@ jobs:
     - name: "Create devlopment environments namespace"
       uses: okteto/namespace@master
       with:
-        name: devenvs-cindylopez
+        namespace: devenvs-cindylopez
 ```
 
