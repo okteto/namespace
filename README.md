@@ -39,6 +39,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
+    - name: checkout
+      uses: actions/checkout@master
+    
     - uses: okteto/login@latest
       with:
         token: ${{ secrets.OKTETO_TOKEN }}
@@ -71,7 +74,9 @@ jobs:
      env:
        OKTETO_CA_CERT: ${{ secrets.OKTETO_CA_CERT }}
      steps:
-     
+     - name: checkout
+      uses: actions/checkout@master
+      
      - uses: okteto/login@latest
        with:
          token: ${{ secrets.OKTETO_TOKEN }}
