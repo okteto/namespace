@@ -1,6 +1,7 @@
 #!/bin/sh
 set -e
 
+namespace=$1
 personal=""
 if [ -z $namespace ]; then
   personal="--personal"
@@ -12,7 +13,6 @@ if [ ! -z "$OKTETO_CA_CERT" ]; then
    update-ca-certificates
 fi
 
-namespace=$1
 echo running: okteto namespace "$namespace" $personal
 okteto namespace "$namespace" $personal
 
