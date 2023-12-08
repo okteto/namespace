@@ -42,6 +42,7 @@ jobs:
     
     - uses: okteto/context@latest
       with:
+        url: https://okteto.example.com
         token: ${{ secrets.OKTETO_TOKEN }}
     
     - name: "Create development environments namespace"
@@ -73,10 +74,11 @@ jobs:
        OKTETO_CA_CERT: ${{ secrets.OKTETO_CA_CERT }}
      steps:
      - name: checkout
-      uses: actions/checkout@master
+       uses: actions/checkout@master
       
      - uses: okteto/context@latest
        with:
+         url: https://okteto.example.com
          token: ${{ secrets.OKTETO_TOKEN }}
 
     - name: "Create development environments namespace"
