@@ -36,4 +36,5 @@ echo running: okteto kubeconfig
 eval okteto kubeconfig
 
 k="/github/home/.kube/config"
+# TODO: update set-output https://github.blog/changelog/2022-10-11-github-actions-deprecating-save-state-and-set-output-commands/
 echo "::set-output name=kubeconfig::$k"
