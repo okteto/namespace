@@ -5,6 +5,9 @@ inputs:
     description: 'The target Kubernetes namespace.'
     required: false
     default: ''
+  log-level:
+    description: "Log level string. Valid options are debug, info, warn, error"
+    required: false 
 outputs:
   kubeconfig: 
     description: 'The path to the kubeconfig'
@@ -13,6 +16,7 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.namespace }}
+    - ${{ inputs.log-level }}
 branding:
   icon: 'arrow-up-circle'  
   color: 'green'
