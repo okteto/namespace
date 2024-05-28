@@ -15,6 +15,10 @@ You can use this action to activate a namespace in Okteto, download the correspo
 
 The namespace to activate. If empty, it will use your personal namespace.
 
+### `log-level`
+
+Log level used. Supported values are: `debug`, `info`, `warn`, `error`. (defaults to warn)
+
 ## Outputs
 
 ### `kubeconfig`
